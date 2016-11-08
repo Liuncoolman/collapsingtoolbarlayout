@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--必须是CoordinatorLayout一级子view-->
+        <!--android.support.design.widget.AppBarLayout-->
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:fitsSystemWindows="true">
+
+            <!--滑动到顶部折叠-->
+            <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="划上去去的内容"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:text="固定在顶部的导航栏"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </android.support.design.widget.AppBarLayout>
+
+
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>
